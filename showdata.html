@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Show scanned Results!</title>
+    <head> </head>
+    <body>
+        <script src="navbar.js"></script>
+        <div class="topnav">
+            <div class="homediv">
+                <button class="home" onclick="home()">Home</button>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="ID-Eingeben.." name="search" id="search" />
+                <button type="submit" onclick="ManualID()">Los!</button>
+            </div>
+        </div>
+        <div class="header">
+            <h1 style="font-family: sans-serif">Inventur-Codescanner</h1>
+        </div>
+        <br />
+        <div class="result">
+            <label for="id">Scanned ID:</label> <br />
+            <div class="output">
+                <p id="id">Placeholder</p>
+            </div>
+            <label for="showname">Name:</label> <br />
+            <div class="output">
+                <p id="showname">Placeholder</p>
+            </div>
+            <label for="showlocation">Raum:</label> <br />
+            <div class="output">
+                <p id="showlocation">Placeholder</p>
+            </div>
+            <label for="memberid">Mitglied Nummer:</label> <br />
+            <div class="output">
+                <p id="memberid">Placeholder</p>
+            </div>
+            <label for="memberfirst">Mitglied Vorname:</label> <br />
+            <div class="output">
+                <p id="memberfirst">Placeholder</p>
+            </div>
+            <label for="membersecond">Mitglied Nachname:</label> <br />
+            <div class="output">
+                <p id="membersecond">Placeholder</p>
+            </div>
+            <label for="auditable">Prüfpflichtig:</label> <br />
+            <div class="output">
+                <p id="auditable">Placeholder</p>
+            </div>
+            
+        </div>
+        <div class="container1">
+            <button class="button1" onclick="ScanPage()">Scannen!</button>
+        </div>
+        <br />
+    </body>
+    <script src="show.js" type="text/javascript"></script>
+</html>
