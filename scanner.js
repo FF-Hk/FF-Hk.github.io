@@ -108,7 +108,7 @@ class Cookies {
         } else {
             showtext.innerHTML = "Bitte Initialisierung durchführen!";
             const onsuccess = (decodedText, decodedResult) => {
-                this.setcookie(decodedText, 1);
+                this.setcookie(decodedText, 180);
                 cam.stopfilm();
                 this.loadcookie();
             };
