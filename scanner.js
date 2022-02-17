@@ -103,17 +103,17 @@ class Cookies {
     }
     checkcookie() {
         let cookiedata = this.getcookie();
-        if (cookiedata != null && cookiedata.charAt(0) == "h" && cookiedata.charAt(1) == "t") {
-            showdiv.style.height = 0;
-            this.loadcookie();
-        } else {
-            showtext.innerHTML = "Bitte Initialisierung durchführen!";
-            const onsuccess = (decodedText, decodedResult) => {
-                this.setcookie(decodedText, 180);
-                cam.stopfilm();
+        let geturl = new URLSearchParams(window.location.search);
+        let link = geturl.get("k");
+        if(link == "/init")
+        {this.initlinkcookie()}
+        else{
+            if (cookiedata != null && cookiedata.charAt(0) == "h" && cookiedata.charAt(1) == "t") {
+                showdiv.style.height = 0;
                 this.loadcookie();
-            };
-            cam.film(onsuccess);
+            } else {
+                this.initlinkcookie()
+            }
         }
     }
     loadcookie() {
@@ -128,6 +128,15 @@ class Cookies {
             showdiv.style.height = "fit-content";
             showtext.innerHTML = "Datenbank geladen!";
         }
+    }
+    initlinkcookie(){
+        showtext.innerHTML = "Bitte Initialisierung durchführen!";
+            const onsuccess = (decodedText, decodedResult) => {
+                this.setcookie(decodedText, 1);
+                cam.stopfilm();
+                this.loadcookie();
+            };
+            cam.film(onsuccess);
     }
 }
 
