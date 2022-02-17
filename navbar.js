@@ -28,7 +28,6 @@ function ManualID() {
             ShowResult();
         }
     }
-    ShowResult();
 }
 
 function home() {
