@@ -1,6 +1,6 @@
 {
-    "name": "Lukas Adelmann",
-    "short_name": "Lukas",
+    "name": "Inventur Scanner",
+    "short_name": "Inv Scanner",
     "theme_color": "#404040",
     "background_color": "#ffe4e4",
     "display": "standalone",
@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "ffhk.jpg",
+            "src": "ffhk.png",
             "sizes": "1024x1024"
         }
     ]
