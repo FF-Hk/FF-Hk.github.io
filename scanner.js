@@ -253,6 +253,7 @@ function Inv() {
             if (cam.gettext() != null && cam.gettext() != NaN && !scanneddata.includes(cam.getid())) {
                 scanneddata.push(cam.getid());
             }
+            console.log("ready");
             Inventoryresult();
         }
     };
