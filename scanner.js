@@ -247,7 +247,7 @@ function Inv() {
             if (cam.gettext() != null && cam.gettext() != NaN && !scanneddata.includes(cam.getid())) {
                 scanneddata.push(cam.getid());
             }
-            showtext.innerHTML = "Raum: " + room + " \n Zur Inventur weitere Barcodes Scannen!";
+            showtext.innerHTML = "Raum: " + room;
             Inventoryresult();
         } else if (init == false) {
             if (cam.gettext() != null && cam.gettext() != NaN && !scanneddata.includes(cam.getid())) {
@@ -315,7 +315,7 @@ function SaveInventory() {
 //---------------------Get-Inventory-Data----------------------------//
 
 function GetInventory() {
-    showtext.innerHTML = "Daten geladen! \n" + room;
+    showtext.innerHTML = "Daten geladen!" + "\n" + "Raum:" + room;
     scanneddata = InvScanned.getcookie().split(",");
     comparedata = InvComp.getcookie().split(",");
     realdata = InvReal.getcookie().split(",");
