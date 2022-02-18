@@ -233,9 +233,9 @@ function Inv() {
             for (gr = 1; gr < 16; gr++) {
                 for (numb = 1; numb < 10000; numb++) {
                     try {
-                        if (obj.id[getID(gr, numb)].raumName == room) {
-                            if (!realdata.includes(getID(gr, numb))) {
-                                realdata.push(getID(gr, numb));
+                        if (obj.id[gr + "/" + numb].raumName == room) {
+                            if (!realdata.includes(gr + "/" + numb)) {
+                                realdata.push(gr + "/" + numb);
                             }
                         }
                     } catch (error) {}
@@ -261,12 +261,6 @@ function Inv() {
     if (init == true) {
         showtext.innerHTML = "Bitte mit einem Barcode Initialisieren!";
     }
-}
-
-//-------------------------------------------------//
-
-function getID(grp, numb) {
-    return grp + "/" + numb;
 }
 
 //----------------------Change-look-of-site---------------------------//
