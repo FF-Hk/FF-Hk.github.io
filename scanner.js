@@ -230,17 +230,7 @@ function Inv() {
         if (init == true) {
             init = false;
             room = obj.id[cam.getid()].raumName;
-            for (gr = 1; gr < 16; gr++) {
-                for (numb = 1; numb < 10000; numb++) {
-                    try {
-                        if (obj.id[gr + "/" + numb].raumName == room) {
-                            if (!realdata.includes(gr + "/" + numb)) {
-                                realdata.push(gr + "/" + numb);
-                            }
-                        }
-                    } catch (error) {}
-                }
-            }
+            getinroom();
             realdata.forEach((element) => {
                 comparedata.push(element);
             });
@@ -262,6 +252,22 @@ function Inv() {
         showtext.innerHTML = "Bitte mit einem Barcode Initialisieren!";
     }
 }
+
+//----------------------Get-Items-in-Room---------------------------//
+function getinroom(){
+    for (gr = 1; gr < 16; gr++) {
+        for (numb = 1; numb < 10000; numb++) {
+            try {
+                if (obj.id[gr + "/" + numb].raumName == room) {
+                    if (!realdata.includes(gr + "/" + numb)) {
+                        realdata.push(gr + "/" + numb);
+                    }
+                }
+            } catch (error) {}
+        }
+    }
+}
+
 
 //----------------------Change-look-of-site---------------------------//
 
