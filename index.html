@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="">
-    <link rel="apple-touch-icon" href="Brot.png"/>
+    <link rel="apple-touch-icon" href="/pwa/ffhk.png"/>
     <meta name="theme-color" content="#404040">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/pwa/manifest.json">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
     <title>QR Code Scanner first tests</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/serviceworker.js');
+            navigator.serviceWorker.register('/pwa/serviceworker.js');
         }
     </script>
     <head> </head>
@@ -21,8 +21,8 @@
                 <button class="home" onclick="home()">Home</button>
             </div>
             <div class="search-container">
-                <input type="text" placeholder="ID-Eingeben.." name="search" id="search" />
-                <button type="submit" style="color: black;" onclick="ManualID()">Los!</button>
+                <input id="search" type="text" placeholder="ID-Eingeben.." name="search"  />
+                <button id="go" type="submit" style="color: black;" onclick="ManualID()">Los!</button>
             </div>
         </div>
         <div class="header">
@@ -46,9 +46,7 @@
         </div>
         <div class="container1">
             <button id="scannbutton" style="margin-right: 0px" class="button1" onclick="Scan()">Scannen</button>
-            <button id="inventorybutton" style="margin-left: 0px" class="button1" onclick="Inv()">
-                Inventur
-            </button>
+            <button id="inventorybutton" style="margin-left: 0px" class="button1" onclick="Inv()">Inventur</button>
         </div>
         <script src="scanner.js"></script>
         <footer></footer>

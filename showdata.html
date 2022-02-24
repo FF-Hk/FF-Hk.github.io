@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="">
-    <link rel="apple-touch-icon" href="Brot.png"/>
+    <link rel="apple-touch-icon" href="/pwa/ffhk.png"/>
     <meta name="theme-color" content="#404040">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/pwa/manifest.json">
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
     <title>Show scanned Results!</title>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/serviceworker.js');
+            navigator.serviceWorker.register('/pwa/serviceworker.js');
         }
     </script>
     <head> </head>
@@ -20,7 +20,7 @@
             </div>
             <div class="search-container">
                 <input type="text" placeholder="ID-Eingeben.." name="search" id="search" />
-                <button type="submit" onclick="ManualID()">Los!</button>
+                <button id="go" type="submit" onclick="ManualID()">Los!</button>
             </div>
         </div>
         <div class="header">
@@ -56,10 +56,10 @@
             <div class="output">
                 <p id="auditable">Placeholder</p>
             </div>
-            
-        </div>
-        <div class="container1">
-            <button class="button1" onclick="ScanPage()">Scannen!</button>
+            <label for="buildat">Baujahr:</label> <br />
+            <div class="output">
+                <p id="buildat">Placeholder</p>
+            </div>   
         </div>
         <br />
     </body>

@@ -1,5 +1,7 @@
 var inputtext;
 var resulte;
+//const gobutton = document.getElementById("go");
+
 
 function ShowResult() {
     //Funktion um einen Link weiterzugeben welcher die ID enthält
@@ -21,16 +23,18 @@ function ManualID() {
             let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
             group = parseInt(idfirst);
 
-            let idlast = decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5) + decodedText.charAt(6);
+            let idlast = decodedText.charAt(2) + decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5);
             number = parseInt(idlast);
 
             resulte = group + "/" + number;
             ShowResult();
         }
     }
+    
 }
 
 function home() {
+    document.getElementById("go").onclick = function() {ManualID()};
     document.close();
     window.location.replace("index.html");
 }
