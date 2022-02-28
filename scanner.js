@@ -132,7 +132,7 @@ class Cookies {
     initlinkcookie() {
         showtext.innerHTML = "Bitte Initialisierung durchführen!";
         searchbar.placeholder = "Bitte Link einfügen!";
-        document.getElementById("go").onclick = function () {
+        gobutton.onclick = function () {
             initlink();
         };
         const onsuccess = (decodedText, decodedResult) => {
@@ -142,6 +142,7 @@ class Cookies {
             gobutton.onclick = function () {
                 ManualID();
             };
+            searchbar.placeholder = "ID-Eingeben..";
         };
         cam.film(onsuccess);
     }
@@ -196,10 +197,6 @@ const cam = new Camera(html5QrCode, conf);
 
 const DataBase = new Cookies("database");
 DataBase.checkcookie();
-
-const InvScanned = new Cookies("scanneddata");
-const InvComp = new Cookies("comparedata");
-const InvReal = new Cookies("realdata");
 
 const pdf = new PDF(20, 7, "FF Hohenkogl");
 

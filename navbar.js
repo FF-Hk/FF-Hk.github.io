@@ -1,6 +1,5 @@
 var inputtext;
 var resulte;
-//const gobutton = document.getElementById("go");
 
 
 function ShowResult() {
