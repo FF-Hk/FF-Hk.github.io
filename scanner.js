@@ -139,6 +139,9 @@ class Cookies {
             this.setcookie(decodedText, 1);
             cam.stopfilm();
             this.loadcookie();
+            gobutton.onclick = function () {
+                ManualID();
+            };
         };
         cam.film(onsuccess);
     }
@@ -207,9 +210,6 @@ function initlink() {
     let text = searchbar.value;
     DataBase.setcookie(text, 1);
     DataBase.loadcookie();
-    gobutton.onclick = function () {
-        ManualID();
-    };
     try {
         cam.stopfilm();
     } catch {}
