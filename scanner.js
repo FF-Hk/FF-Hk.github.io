@@ -136,7 +136,7 @@ class Cookies {
             initlink();
         };
         const onsuccess = (decodedText, decodedResult) => {
-            this.setcookie(decodedText, 1);
+            this.setcookie(decodedText, 90);
             cam.stopfilm();
             this.loadcookie();
             gobutton.onclick = function () {
