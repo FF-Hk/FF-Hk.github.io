@@ -204,9 +204,9 @@ function Inventoryresult() {
         try{
             var resultel = obj.filter((obj) => obj.invInvNummer === item);
         }
-        catch()
+        catch(err)
         {
-            alert("Nicht in der Datenbank vorhanden");
+            alert("Gegenstand nicht in der Datenbank enthalten!");
         }
         if (comparedata.includes(resultel[0].invInvNummer)) {
             comparedata.splice(comparedata.indexOf(resultel[0].invInvNummer), 1);
