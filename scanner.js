@@ -104,6 +104,7 @@ function Inv() {
 function id() {
     if (init == true) {
         init = false;
+        if 
         scanneddata.push(cam.getid());
         var dat = obj.filter((obj) => obj.invInvNummer === cam.getid());
         room = dat[0].raumName;
@@ -204,7 +205,13 @@ function Inventoryresult() {
     list.innerHTML = "";
 
     scanneddata.forEach((item) => {
-        var resultel = obj.filter((obj) => obj.invInvNummer === item);
+        try{
+            var resultel = obj.filter((obj) => obj.invInvNummer === item);
+        }
+        catch()
+        {
+            alert("Nicht in der Datenbank vorhanden");
+        }
         if (comparedata.includes(resultel[0].invInvNummer)) {
             console.log(comparedata)
             comparedata.splice(comparedata.indexOf(resultel[0].invInvNummer), 1);
