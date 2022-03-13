@@ -52,7 +52,6 @@ const pdf = new PDF(20, zeilenabstand, "FF Hohenkogl");
 //---------------------Manual-Init-of-Database-----------------------//
 
 function initlink() {
-    console.log();
     let text = searchbar.value;
     DataBase.setcookie(text, 1);
     DataBase.loadcookie();
@@ -104,7 +103,6 @@ function Inv() {
 function id() {
     if (init == true) {
         init = false;
-        if 
         scanneddata.push(cam.getid());
         var dat = obj.filter((obj) => obj.invInvNummer === cam.getid());
         room = dat[0].raumName;
@@ -122,8 +120,6 @@ function id() {
     } else if (init == false) {
         if (!scanneddata.includes(cam.getid())) {
             scanneddata.push(cam.getid());
-            console.log(cam.getid())
-            console.log(scanneddata)
         }
         
     }
@@ -213,9 +209,7 @@ function Inventoryresult() {
             alert("Nicht in der Datenbank vorhanden");
         }
         if (comparedata.includes(resultel[0].invInvNummer)) {
-            console.log(comparedata)
             comparedata.splice(comparedata.indexOf(resultel[0].invInvNummer), 1);
-            console.log(comparedata)
         } else if (!realdata.includes(resultel[0].invInvNummer) && !notrightdata.includes(resultel[0].invInvNummer)) {
             notrightdata.push(resultel[0].invInvNummer);
         }
