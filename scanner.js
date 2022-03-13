@@ -203,16 +203,17 @@ function Inventoryresult() {
     scanneddata.forEach((item) => {
         try{
             var resultel = obj.filter((obj) => obj.invInvNummer === item);
+            if (comparedata.includes(resultel[0].invInvNummer)) {
+            comparedata.splice(comparedata.indexOf(resultel[0].invInvNummer), 1);
+            } else if (!realdata.includes(resultel[0].invInvNummer) && !notrightdata.includes(resultel[0].invInvNummer)) {
+            notrightdata.push(resultel[0].invInvNummer);
+        }
         }
         catch(err)
         {
             alert("Gegenstand nicht in der Datenbank enthalten!");
         }
-        if (comparedata.includes(resultel[0].invInvNummer)) {
-            comparedata.splice(comparedata.indexOf(resultel[0].invInvNummer), 1);
-        } else if (!realdata.includes(resultel[0].invInvNummer) && !notrightdata.includes(resultel[0].invInvNummer)) {
-            notrightdata.push(resultel[0].invInvNummer);
-        }
+        
     });
     notrightdata.forEach((item) => {
         var resultel = obj.filter((obj) => obj.invInvNummer === item);
