@@ -53,7 +53,7 @@ const pdf = new PDF(20, zeilenabstand, "FF Hohenkogl");
 
 function initlink() {
     let text = searchbar.value;
-    DataBase.setcookie(text, 1);
+    DataBase.setcookie(text, 180);
     DataBase.loadcookie();
     try {
         cam.stopfilm();
