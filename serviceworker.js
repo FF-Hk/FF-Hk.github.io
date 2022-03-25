@@ -1,7 +1,7 @@
 self.addEventListener('install', event => {
     event.waitUntil(
           caches
-            .open(cacheName)
+            .open('v1.0')
             .then(cache => {
               console.log('Service Worker: Caching Files');
               cache.addAll([
