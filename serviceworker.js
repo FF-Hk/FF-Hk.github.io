@@ -1,12 +1,14 @@
-self.addEventListener('install', event => {
+this.addEventListener('install', event => {
     event.waitUntil(
       caches.open('v1').then(function(cache) {
         return cache.addAll([
+          '/',
           '/navbar.js',
           '/scanner.js',
           '/show.js',
           '/showdata.js',
           '/style.css',
+          '/classes/',
           '/classes/camera.js',
           '/classes/init.js',
           '/classes/pdf.js'
@@ -14,7 +16,7 @@ self.addEventListener('install', event => {
       })
     );
   });
-self.addEventListener('fetch', event => {
+this.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
     );
