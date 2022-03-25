@@ -12,7 +12,13 @@
         {
             "src": "ffhk.png",
             "sizes": "1024x1024",
-            "purpose": "maskable"
+            "purpose": "any maskable"
+        }
+    ],
+    "icons": [
+        {
+            "src": "ffhk.png",
+            "sizes": "1024x1024"
         }
     ]
 }
