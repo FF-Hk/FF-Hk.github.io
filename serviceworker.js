@@ -2,12 +2,6 @@ this.addEventListener('install', event => {
     event.waitUntil(
       caches.open('v1').then(function(cache) {
         return cache.addAll([
-          '/',
-          '/navbar.js',
-          '/scanner.js',
-          '/show.js',
-          '/showdata.js',
-          '/style.css',
           '/classes/',
           '/classes/camera.js',
           '/classes/init.js',
