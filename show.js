@@ -5,7 +5,7 @@ const scannedid = geturl.get("k");
 
 const DataBase = new Link("database");
 
-loadData(DataBase.getcookie());
+loadData(DataBase.getdata());
 
 function loadData(datalink) {
     var script = document.createElement("script");
