@@ -1,6 +1,3 @@
-
-
-
 const showtext = document.getElementById("showtext");
 const showdiv = document.getElementById("showdiv");
 const readydiv = document.getElementById("readydiv");
