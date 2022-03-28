@@ -9,13 +9,13 @@ class Link {
         return localStorage.getItem(this.name);
     }
     checklink() {
-        let link = this.getdata();
+        let dataurl = this.getdata();
         let geturl = new URLSearchParams(window.location.search);
         let link = geturl.get("k");
         if (link == "/init") {
             this.initlink();
         } else {
-            if (link != null && link.charAt(0) == "h" && link.charAt(1) == "t") {
+            if (dataurl != null && dataurl.charAt(0) == "h" && dataurl.charAt(1) == "t") {
                 showdiv.style.height = 0;
                 this.loadlink();
             } else {
@@ -24,13 +24,13 @@ class Link {
         }
     }
     loadlink() {
-        let link = this.getdata();
-        if (link != null && link.charAt(0) == "h" && link.charAt(1) == "t") {
+        let dataurl = this.getdata();
+        if (dataurl != null && dataurl.charAt(0) == "h" && dataurl.charAt(1) == "t") {
             var script = document.createElement("script");
             script.onload = function () {
                 obj = JSON.parse(data);
             };
-            script.src = link;
+            script.src = dataurl;
             document.getElementsByTagName("head")[0].appendChild(script);
             showdiv.style.height = "fit-content";
             showtext.innerHTML = "Datenbank geladen!";
