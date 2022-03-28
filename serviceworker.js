@@ -3,7 +3,7 @@ self.addEventListener('install', event => {
           caches
             .open('v1')
             .then(cache => {
-              console.log(sites installed);
+              console.log("sites installed");
               cache.addAll([
                 'navbar.js',
                 'scanner.js',
@@ -12,7 +12,7 @@ self.addEventListener('install', event => {
                 '/classes/init.js',
                 '/classes/pdf.js'
               ]);
-              console.log(ready installed);
+              console.log("ready installed");
             })
             .then(() => self.skipWaiting())
         );
