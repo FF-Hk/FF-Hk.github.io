@@ -52,7 +52,6 @@ class Link {
             document.getElementsByTagName("head")[0].appendChild(script);
             showdiv.style.height = "fit-content";
             showtext.innerHTML = "Datenbank geladen!";
-            console.log(this.getcookie());
         }
     }
     initlinkcookie() {
