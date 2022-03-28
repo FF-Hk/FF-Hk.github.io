@@ -58,6 +58,10 @@ function initlink() {
     try {
         cam.stopfilm();
     } catch {}
+    gobutton.onclick = function () {
+        ManualID();
+    };
+    searchbar.placeholder = "ID-Eingeben..";
 }
 
 //------------------------Scan-Button-------------------------//
