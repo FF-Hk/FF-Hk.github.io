@@ -45,7 +45,7 @@ const html5QrCode = new Html5Qrcode("reader");
 const cam = new Camera(html5QrCode, conf);
 
 const DataBase = new Link("database");
-DataBase.checkcookie();
+DataBase.checklink();
 
 const pdf = new PDF(20, zeilenabstand, "FF Hohenkogl");
 
@@ -53,8 +53,8 @@ const pdf = new PDF(20, zeilenabstand, "FF Hohenkogl");
 
 function initlink() {
     let text = searchbar.value;
-    DataBase.setcookie(text, 180);
-    DataBase.loadcookie();
+    DataBase.setdata(text, 180);
+    DataBase.loadlink();
     try {
         cam.stopfilm();
     } catch {}
