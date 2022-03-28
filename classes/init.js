@@ -8,7 +8,7 @@ class Link {
     getdata() {
         return localStorage.getItem(this.name);
     }
-    checkcookie() {
+    checklink() {
         let link = this.getdata();
         let geturl = new URLSearchParams(window.location.search);
         let link = geturl.get("k");
