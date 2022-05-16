@@ -28,11 +28,11 @@ class Camera {
         
         let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
         this.group = parseInt(idfirst);
-        console.log(this.group)
+        console.log(idfirst)
 
         let idlast = decodedText.charAt(2) + decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5);
         this.number = parseInt(idlast);
-        console.log(this.number)
+        console.log(idlast)
     }
     getid() {
         return this.group + "/" + this.number;
