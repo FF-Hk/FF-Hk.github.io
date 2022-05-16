@@ -70,8 +70,6 @@ function Scan() {
     showdiv.style.height = "fit-content";
     showtext.innerHTML = "Bitte einen Barcode Scannen";
     const onsuccess = (decodedText, decodedResult) => {
-        console.log("scan:")
-        console.log(decodedText)
         cam.dectxt(decodedText);
         resulte = cam.getid();
         cam.stopfilm();
