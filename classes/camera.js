@@ -27,6 +27,12 @@ class Camera {
         console.log(this.text)
         
         let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
+        console.log(this.text.charAt(0))
+        console.log(this.text.charAt(1))
+        
+        console.log(decodedText.charAt(0))
+        console.log(decodedText.charAt(1))
+        
         this.group = parseInt(idfirst);
         console.log(idfirst)
 
