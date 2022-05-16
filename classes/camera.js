@@ -25,6 +25,7 @@ class Camera {
         console.log("program:")
         console.log(decodedText)
         console.log(this.text)
+        console.log(typeof(decodedText))
         
         let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
         console.log(this.text.charAt(0))
