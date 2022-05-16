@@ -21,25 +21,14 @@ class Camera {
     }
     dectxt(decodedText) {
         this.text = decodedText;
-
-        console.log("program:")
-        console.log(decodedText)
-        console.log(this.text)
-        console.log(typeof(decodedText))
         
         let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
-        console.log(this.text.charAt(0))
-        console.log(this.text.charAt(1))
-        
-        console.log(decodedText.charAt(0))
-        console.log(decodedText.charAt(1))
         
         this.group = parseInt(idfirst);
-        console.log(idfirst)
+
 
         let idlast = decodedText.charAt(2) + decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5);
         this.number = parseInt(idlast);
-        console.log(idlast)
     }
     getid() {
         return this.group + "/" + this.number;
