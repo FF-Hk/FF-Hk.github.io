@@ -22,13 +22,28 @@ class Camera {
     dectxt(decodedText) {
         this.text = decodedText;
         
-        let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
+        if (this.text.decodedText.charAt(0) == " ") {
+            let idfirst = decodedText.charAt(1) + decodedText.charAt(2);
+
+            this.group = parseInt(idfirst);
+
+
+            let idlast = decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5) + decodedText.charAt(6);
+            this.number = parseInt(idlast);
+        }
+        else
+        {
         
-        this.group = parseInt(idfirst);
+            let idfirst = decodedText.charAt(0) + decodedText.charAt(1);
+
+            this.group = parseInt(idfirst);
 
 
-        let idlast = decodedText.charAt(2) + decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5);
-        this.number = parseInt(idlast);
+            let idlast = decodedText.charAt(2) + decodedText.charAt(3) + decodedText.charAt(4) + decodedText.charAt(5);
+            this.number = parseInt(idlast);
+            
+        }
+        
     }
     getid() {
         return this.group + "/" + this.number;
