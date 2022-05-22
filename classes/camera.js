@@ -22,7 +22,7 @@ class Camera {
     dectxt(decodedText) {
         this.text = decodedText;
         
-        if (this.text.decodedText.charAt(0) == " ") {
+        if (decodedText.charAt(0) == " ") {
             let idfirst = decodedText.charAt(1) + decodedText.charAt(2);
 
             this.group = parseInt(idfirst);
