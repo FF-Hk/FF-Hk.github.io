@@ -2,7 +2,6 @@ class Camera {
     constructor(scanner, config) {
         this.scanner = scanner;
         this.config = config;
-        this.ready = false;
         const html5QrCode = new Html5Qrcode("reader");
     }
     film(succ) {
