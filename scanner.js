@@ -25,7 +25,7 @@ var scanneddata = [];
 var comparedata = [];
 var notrightdata = [];
 
-var resulte;
+var resulte = "";
 
 var date = now.getDate() + "." + (now.getMonth() + 1) + "." + now.getFullYear();
 
@@ -72,9 +72,8 @@ function Scan() {
     const onsuccess = (decodedText, decodedResult) => {
         cam.dectxt(decodedText);
         resulte = cam.getid();
-        cam.stopfilm();
-        document.close();
-        window.location.replace("showdata.html?k=" + resulte);
+	ShowResult();
+	cam.stopfilm();
     };
     cam.film(onsuccess);
 }
@@ -230,4 +229,11 @@ function Inventoryresult() {
         li.innerText = "Nummer: " + resultel[0].invInvNummer + "\n" + "Name: " + resultel[0].invName;
         list.appendChild(li);
     });
+}
+
+//--------------------------------------------------------------------------//
+function ShowResult() {
+    //Funktion um einen Link weiterzugeben welcher die ID enthält
+    document.close(); //Aktuelles HTML-Dokument schließen
+    window.location.replace("showdata.html?k=" + resulte); //Auf schowdata HTML-Dokument weiterleiten mit gescannter ID im Link
 }
